@@ -8,10 +8,10 @@ export default function navBar() {
     <header>
       <nav>
         <img src={logoIcon} alt="logo" />
-        {navLinks.map((link, index) => (
+        {navLinks.map((link) => (
           <ul>
             <Link href={link.path}>
-              <li key={index}>{link.name}</li>
+              <li>{link.name}</li>
             </Link>
           </ul>
         ))}

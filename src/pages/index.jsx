@@ -4,21 +4,26 @@ import { fetchCurr } from '../redux/actions';
 
 function home(props) {
   const { fetchApi, listCart, listStore } = props;
-  const [wines, setWines] = useState([]);
 
   useEffect(() => {
     fetchApi();
-    setWines(listStore);
   }, []);
 
-  console.log(wines);
+  // while (listStore.length === 0) {
+  //   return (
+  //     <h1>carregando loja</h1>
+  //   );
+  // }
 
   return (
     <div>
       <h1>Loja</h1>
-      {/* {wines.map(() => {
-        {}
-      })} */}
+      {listStore ? listStore.map((wine) => (
+        <ul>
+          <li>{wine.name}</li>
+        </ul>
+      ))
+        : <h1>carregando loja</h1>}
     </div>
   );
 }
