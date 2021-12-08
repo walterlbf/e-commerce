@@ -1,11 +1,11 @@
 export const navLinks = [
   {
     name: 'Clube',
-    path: '/',
+    path: '/clube',
   },
   {
     name: 'Loja',
-    path: '/loja',
+    path: '/',
   },
   {
     name: 'Produtores',
