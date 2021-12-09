@@ -16,6 +16,11 @@ export default function navBar() {
           ))}
         </ul>
       </nav>
+      <div>
+        <Link href="/cart">
+          <img src="../img/winebox.svg" />
+        </Link>
+      </div>
     </header>
   );
 }
