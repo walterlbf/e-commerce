@@ -10,19 +10,12 @@ function home(props) {
     fetchApi();
   }, []);
 
-  // while (listStore.length === 0) {
-  //   return (
-  //     <h1>carregando loja</h1>
-  //   );
-  // }
-  console.log(listStore);
   return (
     <div>
       <h1>Loja</h1>
       <ul>
         {listStore ? listStore.map((wine) => (
           <Product key={wine.id} wine={wine} />
-          // <li key={wine.id}>{wine.name}</li>
         ))
           : <h1>carregando loja</h1>}
       </ul>
