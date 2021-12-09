@@ -18,7 +18,7 @@ export default function navBar() {
       </nav>
       <div>
         <Link href="/cart">
-          <img src="../img/winebox.svg" />
+          <img src="../img/winebox.svg" alt="Carrinho" />
         </Link>
       </div>
     </header>

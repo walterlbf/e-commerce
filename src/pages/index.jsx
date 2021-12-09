@@ -4,7 +4,7 @@ import Product from '../componentes/Product';
 import { fetchCurr } from '../redux/actions';
 
 function home(props) {
-  const { fetchApi, listCart, listStore } = props;
+  const { fetchApi, listStore } = props;
 
   useEffect(() => {
     fetchApi();
@@ -25,7 +25,6 @@ function home(props) {
 
 const mapStateToProps = (state) => ({
   listStore: state.cartList.currStore,
-  listCart: state.cartList.list,
 });
 
 const mapDispatchtoProps = (dispatch) => ({
