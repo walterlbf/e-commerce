@@ -6,15 +6,15 @@ import logoIcon from '../img/black.svg';
 export default function navBar() {
   return (
     <header>
+      <img src={logoIcon} alt="logo" />
       <nav>
-        <img src={logoIcon} alt="logo" />
-        {navLinks.map((link) => (
-          <ul>
+        <ul>
+          {navLinks.map((link) => (
             <Link href={link.path}>
-              <li>{link.name}</li>
+              <li key={link.id}>{link.name}</li>
             </Link>
-          </ul>
-        ))}
+          ))}
+        </ul>
       </nav>
     </header>
   );
