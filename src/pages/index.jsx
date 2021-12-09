@@ -31,7 +31,7 @@ function home(props) {
 }
 
 const mapStateToProps = (state) => ({
-  listStore: state.storeList.currStore,
+  listStore: state.cartList.currStore,
   listCart: state.cartList.list,
 });
 

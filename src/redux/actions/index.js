@@ -1,7 +1,7 @@
 // import * as Api from '../services/Api';
 const url = 'https://wine-back-test.herokuapp.com/products?page=1&limit=10';
 
-export const addItemToList = (item) => ({
+export const addItemToCart = (item) => ({
   type: 'ADD_ITEM',
   payload: {
     item,

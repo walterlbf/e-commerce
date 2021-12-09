@@ -15,13 +15,6 @@ export const cartReducer = (state = INITIAL_STATE, action) => {
         ...state,
         list: [...state.list.filter(({ id }) => id !== action.payload.id)],
       };
-    default:
-      return state;
-  }
-};
-
-export const storeReducer = (state = INITIAL_STATE, action) => {
-  switch (action.type) {
     case 'REQUEST_API':
       return {
         ...state,
@@ -35,3 +28,19 @@ export const storeReducer = (state = INITIAL_STATE, action) => {
       return state;
   }
 };
+
+// export const storeReducer = (state = INITIAL_STATE, action) => {
+//   switch (action.type) {
+//     case 'REQUEST_API':
+//       return {
+//         ...state,
+//       };
+//     case 'RESPONSE_API':
+//       return {
+//         ...state,
+//         currStore: action.payload.items,
+//       };
+//     default:
+//       return state;
+//   }
+// };
