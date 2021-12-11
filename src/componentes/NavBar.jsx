@@ -10,8 +10,8 @@ export default function navBar() {
       <nav>
         <ul>
           {navLinks.map((link) => (
-            <Link href={link.path}>
-              <li key={link.id}>{link.name}</li>
+            <Link key={link.id} href={link.path}>
+              <li>{link.name}</li>
             </Link>
           ))}
         </ul>
@@ -20,6 +20,7 @@ export default function navBar() {
         <Link href="/cart">
           <img src="../img/winebox.svg" alt="Carrinho" />
         </Link>
+        <img src="../img/Busca.svg" alt="Buscar" />
       </div>
     </header>
   );

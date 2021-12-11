@@ -10,14 +10,20 @@ function home(props) {
     fetchApi();
   }, []);
 
+  const renderCards = () => {
+    const NUMBER = 9;
+    return listStore.map((wine, index) => {
+      if (index < NUMBER) {
+        return (<Product key={wine.id} wine={wine} />);
+      }
+      return null;
+    });
+  };
   return (
     <div>
       <h1>Loja</h1>
       <ul>
-        {listStore ? listStore.map((wine) => (
-          <Product key={wine.id} wine={wine} />
-        ))
-          : <h1>carregando loja</h1>}
+        {listStore ? renderCards() : <h1>carregando loja</h1>}
       </ul>
     </div>
   );
