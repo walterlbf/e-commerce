@@ -19,6 +19,7 @@ function home(props) {
       return null;
     });
   };
+
   return (
     <div>
       <h1>Loja</h1>

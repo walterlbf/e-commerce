@@ -1,7 +1,8 @@
 import Link from 'next/link';
 import React from 'react';
 import { navLinks } from '../utils/data';
-import logoIcon from '../img/black.svg';
+import logoIcon from '../img/Busca.svg';
+import SearchBar from './SearchBar';
 
 export default function navBar() {
   return (
@@ -20,7 +21,7 @@ export default function navBar() {
         <Link href="/cart">
           <img src="../img/winebox.svg" alt="Carrinho" />
         </Link>
-        <img src="../img/Busca.svg" alt="Buscar" />
+        <SearchBar />
       </div>
     </header>
   );
