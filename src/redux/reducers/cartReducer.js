@@ -4,7 +4,6 @@ const INITIAL_STATE = {
 };
 
 export const cartReducer = (state = INITIAL_STATE, action) => {
-  console.log(action);
   switch (action.type) {
     case 'ADD_ITEM':
       return {
@@ -34,19 +33,3 @@ export const cartReducer = (state = INITIAL_STATE, action) => {
       return state;
   }
 };
-
-// export const storeReducer = (state = INITIAL_STATE, action) => {
-//   switch (action.type) {
-//     case 'REQUEST_API':
-//       return {
-//         ...state,
-//       };
-//     case 'RESPONSE_API':
-//       return {
-//         ...state,
-//         currStore: action.payload.items,
-//       };
-//     default:
-//       return state;
-//   }
-// };

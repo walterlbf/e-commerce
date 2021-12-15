@@ -8,7 +8,6 @@ const SearchBar = function ({ listStore, attStore }) {
   const handleChange = ({ target: { value } }) => {
     setInput(value);
 
-    console.log(listStore);
     const newDisplay = listStore.filter(((item) => {
       if (input === '') {
         return item;
@@ -17,7 +16,6 @@ const SearchBar = function ({ listStore, attStore }) {
       }
     }));
     attStore(newDisplay);
-    console.log(newDisplay);
   };
 
   return (
