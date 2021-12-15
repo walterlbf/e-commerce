@@ -15,6 +15,13 @@ export const deleteItem = (id) => ({
   },
 });
 
+export const searchItem = (items) => ({
+  type: 'SEARCH_ITEM',
+  payload: {
+    items,
+  },
+});
+
 const requestApi = () => ({
   type: 'REQUEST_API',
 });

@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
+import { searchItem } from '../redux/actions';
 
-const SearchBar = function ({ listStore }) {
+const SearchBar = function ({ listStore, attStore }) {
   const [input, setInput] = useState('');
 
-  // console.log(listStore);
   const handleChange = ({ target: { value } }) => {
     setInput(value);
 
+    console.log(listStore);
     const newDisplay = listStore.filter(((item) => {
       if (input === '') {
         return item;
@@ -15,7 +16,7 @@ const SearchBar = function ({ listStore }) {
         return item;
       }
     }));
-
+    attStore(newDisplay);
     console.log(newDisplay);
   };
 
@@ -33,7 +34,7 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchtoProps = (dispatch) => ({
-
+  attStore: (items) => dispatch(searchItem(items)),
 });
 
 export default connect(mapStateToProps, mapDispatchtoProps)(SearchBar);
