@@ -1,5 +1,6 @@
 const INITIAL_STATE = {
   currStore: [],
+  searchResult: [],
   list: [],
 };
 
@@ -27,7 +28,7 @@ export const cartReducer = (state = INITIAL_STATE, action) => {
     case 'SEARCH_ITEM':
       return {
         ...state,
-        currStore: action.payload.items,
+        searchResult: action.payload.items,
       };
     default:
       return state;

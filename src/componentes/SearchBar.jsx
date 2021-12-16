@@ -1,18 +1,14 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
 import { searchItem } from '../redux/actions';
 
 const SearchBar = function ({ listStore, attStore }) {
-  const [input, setInput] = useState('');
-
   const handleChange = ({ target: { value } }) => {
-    setInput(value);
-
-    const newDisplay = listStore.filter(((item) => {
-      if (input === '') {
-        return item;
-      } if (item.name.toLowerCase().includes(input.toLocaleLowerCase())) {
-        return item;
+    const newDisplay = listStore.filter(((wine) => {
+      if (value === '') {
+        return wine;
+      } if (wine.name.toLowerCase().includes(value.toLocaleLowerCase())) {
+        return wine;
       }
     }));
     attStore(newDisplay);

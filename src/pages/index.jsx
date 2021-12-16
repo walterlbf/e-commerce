@@ -4,7 +4,7 @@ import Product from '../componentes/Product';
 import { fetchCurr } from '../redux/actions';
 
 function home(props) {
-  const { fetchApi, listStore } = props;
+  const { fetchApi, listStore, searchBar } = props;
 
   useEffect(() => {
     fetchApi();
@@ -12,6 +12,15 @@ function home(props) {
 
   const renderCards = () => {
     const NUMBER = 9;
+    if (searchBar.length > 0) {
+      console.log(searchBar);
+      return searchBar.map((wine, index) => {
+        if (index < NUMBER) {
+          return (<Product key={wine.id} wine={wine} />);
+        }
+        return null;
+      });
+    }
     return listStore.map((wine, index) => {
       if (index < NUMBER) {
         return (<Product key={wine.id} wine={wine} />);
@@ -32,6 +41,7 @@ function home(props) {
 
 const mapStateToProps = (state) => ({
   listStore: state.cartList.currStore,
+  searchBar: state.cartList.searchResult,
 });
 
 const mapDispatchtoProps = (dispatch) => ({
