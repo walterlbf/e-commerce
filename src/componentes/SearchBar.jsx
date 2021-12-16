@@ -12,6 +12,10 @@ const SearchBar = function ({ listStore, attStore }) {
       }
     }));
     attStore(newDisplay);
+
+    if (value === '') {
+      attStore([]);
+    }
   };
 
   return (

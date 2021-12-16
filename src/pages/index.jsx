@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
+import Found from '../componentes/Found';
 import Product from '../componentes/Product';
 import { fetchCurr } from '../redux/actions';
 
@@ -8,10 +9,12 @@ function home(props) {
 
   useEffect(() => {
     fetchApi();
+    // localStorage.setItem('cartList', JSON.stringify([]));
   }, []);
 
   const renderCards = () => {
     const NUMBER = 9;
+
     if (searchBar.length > 0) {
       console.log(searchBar);
       return searchBar.map((wine, index) => {
@@ -32,6 +35,7 @@ function home(props) {
   return (
     <div>
       <h1>Loja</h1>
+      <Found />
       <ul>
         {listStore ? renderCards() : <h1>carregando loja</h1>}
       </ul>
