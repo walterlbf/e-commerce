@@ -32,3 +32,4 @@ O desafio será implementar um e-commerce para venda de vinhos que deverá ter a
 - faltam Tests
 - falta implementar paginacao no catalogo de protudos
 - precisa corrigir bug de deletar item no carrinho
+- estudar styled-components
