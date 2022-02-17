@@ -1,8 +1,8 @@
 import Link from 'next/link';
 import React from 'react';
-import { navLinks } from '../utils/data';
-import logoIcon from '../img/Busca.svg';
-import SearchBar from './SearchBar';
+import { navLinks } from '../../utils/data';
+import logoIcon from '../../img/black.png';
+import SearchBar from '../SeachBar/SearchBar';
 
 export default function navBar() {
   return (

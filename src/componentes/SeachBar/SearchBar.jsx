@@ -1,8 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { searchItem } from '../redux/actions';
+import { searchItem } from '../../redux/actions/index';
 
-const SearchBar = function ({ listStore, attStore }) {
+const SearchBar = ({ listStore, attStore }) => {
   const handleChange = ({ target: { value } }) => {
     const newDisplay = listStore.filter(((wine) => {
       if (value === '') {

@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
-import Found from '../componentes/Found';
-import Product from '../componentes/Product';
+import Found from '../componentes/Found/Found';
+import Product from '../componentes/Product/Product';
 import { fetchCurr } from '../redux/actions';
 
 function home(props) {

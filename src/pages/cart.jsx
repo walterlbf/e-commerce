@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import CartItem from '../componentes/CartItem';
+import CartItem from '../componentes/CartItem/CartItem';
 
 function cart({ listCart }) {
   // const localCart = localStorage.getItem('cartList');

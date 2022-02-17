@@ -1,10 +1,10 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { deleteItem } from '../redux/actions';
+import { deleteItem } from '../../redux/actions/index';
 
-const CartItem = function ({
+const CartItem =  ({
   wine, toDelete, listCart, index,
-}) {
+}) => {
   console.log(listCart);
 
   const removeItem = () => {

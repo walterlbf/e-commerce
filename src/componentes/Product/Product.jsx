@@ -1,8 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { addItemToCart } from '../redux/actions';
+import { addItemToCart } from '../../redux/actions/index';
 
-const Product = function ({ wine, addItem, listCart }) {
+const Product = ({ wine, addItem, listCart }) => {
   const addCart = () => {
     addItem(wine);
     console.log(listCart);

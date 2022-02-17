@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 
-const Found = function ({ searchBar }) {
+const Found = ({ searchBar }) => {
   return (
     searchBar.length === 0 ? null : (
       <p>
