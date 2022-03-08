@@ -2,9 +2,9 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { deleteItem } from '../../redux/actions/index';
 
-const CartItem =  ({
+function CartItem({
   wine, toDelete, listCart, index,
-}) => {
+}) {
   console.log(listCart);
 
   const removeItem = () => {
@@ -18,7 +18,7 @@ const CartItem =  ({
       <button type="button" onClick={() => toDelete(wine.id)}>Remover</button>
     </li>
   );
-};
+}
 
 const mapDispatchToProps = (dispatch) => ({
   toDelete: (id) => dispatch(deleteItem(id)),
