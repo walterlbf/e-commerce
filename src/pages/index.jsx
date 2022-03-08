@@ -33,10 +33,10 @@ function home(props) {
   };
 
   return (
-    <div>
+    <div className={styles.container}>
       <h1>Loja</h1>
       <Found />
-      <ul className={styles.container}>
+      <ul className={styles.vitrineContainer}>
         {listStore ? renderCards() : <h1>carregando loja</h1>}
       </ul>
     </div>
