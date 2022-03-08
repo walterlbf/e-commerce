@@ -1,8 +1,9 @@
 import React from 'react';
+import Image from 'next/image';
 import { connect } from 'react-redux';
 import { addItemToCart } from '../../redux/actions/index';
 
-const Product = ({ wine, addItem, listCart }) => {
+function Product({ wine, addItem, listCart }) {
   const addCart = () => {
     addItem(wine);
     console.log(listCart);
@@ -12,12 +13,12 @@ const Product = ({ wine, addItem, listCart }) => {
 
   return (
     <li>
-      <img src={wine.image} alt="" style={{ width: 198.57 }} />
+      <Image src={wine.image} alt="" width={50} height={50} />
       <h3>{wine.name}</h3>
       <button type="button" onClick={addCart}>Adicionar</button>
     </li>
   );
-};
+}
 
 const mapDispatchToProps = (dispatch) => ({
   addItem: (item) => dispatch(addItemToCart(item)),

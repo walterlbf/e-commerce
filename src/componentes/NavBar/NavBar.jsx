@@ -1,13 +1,17 @@
 import Link from 'next/link';
 import React from 'react';
+import Image from 'next/image';
 import { navLinks } from '../../utils/data';
-import logoIcon from '../../img/black.png';
-import SearchBar from '../SeachBar/SearchBar';
+import logo from '../../img/black.svg';
+import winebox from '../../img/winebox.svg';
+// import SearchBar from '../SeachBar/SearchBar';
 
 export default function navBar() {
   return (
     <header>
-      <img src={logoIcon} alt="logo" />
+      <div>
+        <Image src={logo} alt="logo" />
+      </div>
       <nav>
         <ul>
           {navLinks.map((link) => (
@@ -19,9 +23,9 @@ export default function navBar() {
       </nav>
       <div>
         <Link href="/cart">
-          <img src="../img/winebox.svg" alt="Carrinho" />
+          <Image src={winebox} alt="Carrinho" />
         </Link>
-        <SearchBar />
+        {/* <SearchBar /> */}
       </div>
     </header>
   );

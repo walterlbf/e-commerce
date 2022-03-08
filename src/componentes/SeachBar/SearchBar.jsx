@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { searchItem } from '../../redux/actions/index';
 
-const SearchBar = ({ listStore, attStore }) => {
+function SearchBar({ listStore, attStore }) {
   const handleChange = ({ target: { value } }) => {
     const newDisplay = listStore.filter(((wine) => {
       if (value === '') {
@@ -25,7 +25,7 @@ const SearchBar = ({ listStore, attStore }) => {
       </label>
     </form>
   );
-};
+}
 
 const mapStateToProps = (state) => ({
   listStore: state.cartList.currStore,
