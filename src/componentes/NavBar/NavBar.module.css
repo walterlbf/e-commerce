@@ -1,11 +1,12 @@
-
 .headerContainer {
     display: flex;
     padding: 10px;
     align-items: center;
     justify-content: space-between;
+    background-color: #ffff;
 }
 
-.navContainer {
+.navContainer > a {
     justify-content: space-between;
+    padding-left: 10px;
 }

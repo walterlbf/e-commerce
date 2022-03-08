@@ -15,7 +15,7 @@ export default function navBar() {
       <div className="logo-box">
         <Image src={logo} alt="logo" width={103} height={31} />
       </div>
-      <nav className="navContainer">
+      <nav className={styles.navContainer}>
         {navLinks.map((link) => (
           <Link key={link.id} href={link.path}>
             <a href={link.path}>{link.name}</a>
