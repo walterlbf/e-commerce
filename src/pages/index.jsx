@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import Found from '../componentes/Found/Found';
 import Product from '../componentes/Product/Product';
 import { fetchCurr } from '../redux/actions';
+import styles from './Index.module.css';
 
 function home(props) {
   const { fetchApi, listStore, searchBar } = props;
@@ -16,7 +17,6 @@ function home(props) {
     const NUMBER = 9;
 
     if (searchBar.length > 0) {
-      console.log(searchBar);
       return searchBar.map((wine, index) => {
         if (index < NUMBER) {
           return (<Product key={wine.id} wine={wine} />);
@@ -36,7 +36,7 @@ function home(props) {
     <div>
       <h1>Loja</h1>
       <Found />
-      <ul>
+      <ul className={styles.container}>
         {listStore ? renderCards() : <h1>carregando loja</h1>}
       </ul>
     </div>

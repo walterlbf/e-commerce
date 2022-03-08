@@ -13,7 +13,7 @@ function Product({ wine, addItem, listCart }) {
 
   return (
     <li>
-      <Image src={wine.image} alt="" width={198.57} height={178.13} />
+      <Image src={wine.image} alt="" width={198} height={178} />
       <h3>{wine.name}</h3>
       <button type="button" onClick={addCart}>Adicionar</button>
     </li>
