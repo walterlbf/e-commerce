@@ -1,6 +1,7 @@
+import React from 'react';
 import { connect } from 'react-redux';
 
-const Found = ({ searchBar }) => {
+function Found({ searchBar }) {
   return (
     searchBar.length === 0 ? null : (
       <p>
@@ -9,7 +10,7 @@ const Found = ({ searchBar }) => {
       </p>
     )
   );
-};
+}
 
 const mapStateToProps = (state) => ({
   searchBar: state.cartList.searchResult,
