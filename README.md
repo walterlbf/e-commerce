@@ -1,34 +1,35 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+# E-commerce 
 
-First, run the development server:
+## Descrição
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+O desafio será implementar um e-commerce para venda de vinhos que deverá ter as seguintes funcionalidades:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+ - [ ] Catálogo de produtos com paginação
+ - [ ] Filtragem produtos por preço
+ - [x] Busca por nome do produto
+ - [x] Adicionar e remover produtos do carrinho
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+## Install and Run
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+- Open terminal
+- Clone this repository with `git clone https://github.com/walterlbf/e-commerce.git`
+- $ cd ./e-commerce
+- Install dependencies using `npm install`
+- Run project in production `npm run dev`
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## Tecnologias
 
-## Learn More
+- Next.JS
+- Redux
+- React Hooks
+- JavaScript
+- HTML
 
-To learn more about Next.js, take a look at the following resources:
+## Comentarios do desenvolvedor
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- faltam PropTypes
+- faltam Tests
+- falta implementar paginacao no catalogo de protudos
+- precisa corrigir bug de deletar item no carrinho
+- estudar styled-components
