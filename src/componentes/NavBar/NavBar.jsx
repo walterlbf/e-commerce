@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import React from 'react';
 import Image from 'next/image';
-import { navLinks } from '../../utils/data';
+import navLinks from '../../utils/data';
 import logo from '../../img/black.svg';
 import winebox from '../../img/winebox.svg';
 import conta from '../../img/conta.svg';
@@ -15,14 +15,12 @@ export default function navBar() {
       <div className="logo-box">
         <Image src={logo} alt="logo" width={103} height={31} />
       </div>
-      <nav>
-        <ul>
-          {navLinks.map((link) => (
-            <Link key={link.id} href={link.path}>
-              <li>{link.name}</li>
-            </Link>
-          ))}
-        </ul>
+      <nav className="navContainer">
+        {navLinks.map((link) => (
+          <Link key={link.id} href={link.path}>
+            <a href={link.path}>{link.name}</a>
+          </Link>
+        ))}
       </nav>
       <div className="right-itens">
         <Image src={busca} width={56} height={56} />

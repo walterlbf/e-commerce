@@ -1,4 +1,4 @@
-export const navLinks = [
+const navLinks = [
   {
     id: 0,
     name: 'Clube',
@@ -25,3 +25,5 @@ export const navLinks = [
     path: '/eventos',
   },
 ];
+
+export default navLinks;
