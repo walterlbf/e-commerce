@@ -22,7 +22,7 @@ export default function navBar() {
           </Link>
         ))}
       </nav>
-      <div className="right-itens">
+      <div className={styles.rightItems}>
         <Image src={busca} width={56} height={56} />
         <Image src={conta} width={56} height={56} />
         <Link href="/cart">
