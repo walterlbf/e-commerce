@@ -1,7 +1,7 @@
 import React from 'react';
-import Image from 'next/image';
 import { connect } from 'react-redux';
 import Link from 'next/link';
+import styles from './Product.module.css';
 import { addItemToCart } from '../../redux/actions/index';
 
 function Product({ wine, addItem, listCart }) {
@@ -13,14 +13,16 @@ function Product({ wine, addItem, listCart }) {
   };
 
   return (
-    <li>
-      <div>
-        <img src={wine.image} alt="" width={198} height={178} />
+    <li className={styles.container}>
+      <div className={styles.vitrine}>
+        <img src={wine.image} alt="" width={178} height={199} />
         <h3>{wine.name}</h3>
       </div>
-      <Link href="/details">
-        <button type="button">Adicionar</button>
-      </Link>
+      <div className={styles.buttonBox}>
+        <Link href="/details">
+          <button className={styles.buttonStyle} type="button">Adicionar</button>
+        </Link>
+      </div>
     </li>
   );
 }
